@@ -1,0 +1,41 @@
+﻿warning: The `fitz` API is deprecated and will be removed in future. Use `import pymupdf` instead.
+PDF: C:\Users\╨Р╨╗╨╡╨║╤Б╨╡╨╣\projects\PEr08-english-phonetics-rag\data\source\sokolova_practical_phonetics.pdf
+╨б╤В╤А╨░╨╜╨╕╤Ж: 383
+╨б╤В╤А╨░╨╜╨╕╤Ж ╤Б ╤В╨╡╨║╤Б╤В╨╛╨╝: 383
+╨Т╤Б╨╡╨│╨╛ ╤Б╨╕╨╝╨▓╨╛╨╗╨╛╨▓: 624656
+
+--- ╨б╤В╤А╨░╨╜╨╕╤Ж╨░ 1: ╨┐╨╡╤А╨▓╤Л╨╡ 800 ╤Б╨╕╨╝╨▓╨╛╨╗╨╛╨▓ ---
+╨Я╤А╨░╨║╤В╨╕╤З╨╡╤Б╨║╨░╤П
+╤Д╨╛╨╜╨╡╤В╨╕╨║╨░
+╨░╨╜╨│╨╗╨╕╨╣╤Б╨║╨╛╨│╨╛
+╤П╨╖╤Л╨║╨░
+╨а ╨╡ ╨║ ╨╛ ╨╝ ╨╡ ╨╜ ╨┤ ╨╛ ╨▓ ╨░ ╨╜ ╨╛
+╨Ь╨╕╨╜╨╕╤Б╤В╨╡╤А╤Б╤В╨▓╨╛╨╝ ╨╛╨▒╤Й╨╡╨│╨╛ ╨╕ ╨┐╤А╨╛╤Д╨╡╤Б╤Б╨╕╨╛╨╜╨░╨╗╤М╨╜╨╛╨│╨╛ 
+╨╛╨▒╤А╨░╨╖╨╛╨▓╨░╨╜╨╕╤П ╨а╨╛╤Б╤Б╨╕╨╣╤Б╨║╨╛╨╣ ╨д╨╡╨┤╨╡╤А╨░╤Ж╨╕╨╕ 
+╨▓ ╨║╨░╤З╨╡╤Б╤В╨▓╨╡ ╤Г╤З╨╡╨▒╨╜╨╕╨║╨░ ╨┤╨╗╤П ╤Б╤В╤Г╨┤╨╡╨╜╤В╨╛╨▓ ╨▓╤Л╤Б╤И╨╕╤Е 
+╤Г╤З╨╡╨▒╨╜╤Л╤Е ╨╖╨░╨▓╨╡╨┤╨╡╨╜╨╕╨╣
+╨Ь╨╛╤Б╨║╨▓╨░
+┬л╨У╤Г╨╝╨░╨╜╨╕╤В╨░╤А╨╜╤Л╨╣ ╨╕╨╖╨┤╨░╤В╨╡╨╗╤М╤Б╨║╨╕╨╣ ╤Ж╨╡╨╜╤В╤А ╨Т╨Ы╨Р╨Ф╨Ю╨б┬╗
+1997
+
+--- ╨б╤В╤А╨░╨╜╨╕╤Ж╨░ 10: ╨┐╨╡╤А╨▓╤Л╨╡ 800 ╤Б╨╕╨╝╨▓╨╛╨╗╨╛╨▓ ---
+teeth. Most of the palate is hard. This hard and fixed part of the 
+palate is divided into two sections: the 
+h a r d p a l a t e (the 
+highest part of the palate) and the 
+t e e t h 
+r i d g e 
+or 
+a l v e o l a r 
+r i d g e (the part immediately behind the upper 
+front teeth). You can touch the teeth ridge with the t o n g u e - 
+t i p. The teeth ridge is very important in English as many con┬н
+sonants are formed with the tongue touching or close to it. If 
+you still move the tip of the tongue forward you will feel the 
+t e e t h .
+The lower teeth are not very important for making speech 
+sounds, while tile upper teeth take part in the production of 
+many of them.
+The most important organ of speech is the 
+t o n g u e . Pho┬н
+neticians divide the tongue into four sections, the part which l
