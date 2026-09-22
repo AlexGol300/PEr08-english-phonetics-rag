@@ -8,7 +8,8 @@ from pathlib import Path
 
 import pymupdf as fitz
 
-PDF_PATH = Path("data/source/sokolova_practical_phonetics.pdf")
+SOURCE_DIR = Path("data/source")
+PDF_PATH = SOURCE_DIR / "sokolova_practical_phonetics.pdf"
 CHUNKS_PATH = Path("data/processed/chunks.json")
 CHUNK_SIZE = 1200
 OVERLAP = 200
@@ -116,16 +117,59 @@ def build_chunk_records(pdf_path: Path) -> tuple[list[dict], dict]:
     return records, stats
 
 
+def list_knowledge_markdown_files(source_dir: Path) -> list[Path]:
+    """Numbered knowledge-base Markdown files only (skip assignment drafts)."""
+    return sorted(
+        path
+        for path in source_dir.glob("*.md")
+        if re.match(r"^\d{2}_.+\.md$", path.name)
+    )
+
+
+def build_chunk_records_from_md(md_path: Path) -> list[dict]:
+    """Build chunk records from one Markdown knowledge-base file."""
+    raw_text = md_path.read_text(encoding="utf-8")
+    cleaned = clean_text(raw_text)
+    has_figure = page_has_figure(raw_text)
+    source_file = md_path.name
+    page_chunks = split_into_chunks(cleaned, CHUNK_SIZE, OVERLAP)
+    records: list[dict] = []
+
+    for chunk_index, chunk_text in enumerate(page_chunks, start=1):
+        chunk_id = f"{md_path.stem}_c{chunk_index:03d}"
+        records.append(
+            {
+                "id": chunk_id,
+                "text": chunk_text,
+                "metadata": {
+                    "source_file": source_file,
+                    "page_number": 0,
+                    "chunk_id": chunk_id,
+                    "has_figure": has_figure,
+                },
+            }
+        )
+
+    return records
+
+
 def main() -> None:
     if not PDF_PATH.exists():
         raise FileNotFoundError(f"PDF не найден: {PDF_PATH.resolve()}")
 
     records, stats = build_chunk_records(PDF_PATH)
+    print(f"Файл: {PDF_PATH.name} — чанков: {len(records)}")
+
+    md_files = list_knowledge_markdown_files(SOURCE_DIR)
+    for md_path in md_files:
+        md_records = build_chunk_records_from_md(md_path)
+        records.extend(md_records)
+        print(f"Файл: {md_path.name} — чанков: {len(md_records)}")
 
     if not records:
         raise RuntimeError(
             "После обработки не создано ни одного чанка. "
-            "Проверьте содержимое PDF и параметры chunking."
+            "Проверьте содержимое PDF/Markdown и параметры chunking."
         )
 
     CHUNKS_PATH.parent.mkdir(parents=True, exist_ok=True)
@@ -148,6 +192,7 @@ def main() -> None:
     print("text (первые 700 символов):")
     print(example["text"][:700])
     print(f"\nСохранено: {CHUNKS_PATH.resolve()}")
+    print(f"Всего чанков: {len(records)}")
 
 
 if __name__ == "__main__":
